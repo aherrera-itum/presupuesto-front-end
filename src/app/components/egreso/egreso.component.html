@@ -1,0 +1,6 @@
+<div class="container">
+    <h1>Registro de Egresos</h1>
+    <app-egreso-form (refreshEgreso)="refreshEgresoList()" [egreso]="selectEgreso" ></app-egreso-form>
+    <div style="padding: 15px;">&nbsp;</div>
+    <app-egreso-list [refrescarLista]="refrescarLista" (editEgresoEvent)="onEditEgreso($event)" ></app-egreso-list>
+</div>

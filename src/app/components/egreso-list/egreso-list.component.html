@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <h2>Listado de Egresos</h2>
+</mat-toolbar>
+<table mat-table [dataSource]="egresoDataSource">
+    <!-- Monto Column -->
+    <ng-container matColumnDef="monto">
+        <th mat-header-cell *matHeaderCellDef> Monto </th>
+        <td mat-cell *matCellDef="let egreso"> {{ egreso.monto | currency:'USD':'symbol' }} </td>
+    </ng-container>
+    <!-- Fecha Column -->
+    <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let egreso"> {{ egreso.fecha | date:'MM-dd-yyyy' }} </td>
+    </ng-container>
+    <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef> Descripcion</th>
+        <td mat-cell *matCellDef="let egreso"> {{egreso.descripcion}} </td>
+    </ng-container>
+    <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let egreso">
+          <button mat-icon-button color="primary" (click)="editEgreso(egreso)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteEgreso(egreso._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+    </ng-container>  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>  
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

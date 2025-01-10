@@ -1,0 +1,25 @@
+/* Estilo para la fila del footer */
+.footer-row {
+    background-color: #999; /* Fondo gris claro */
+    font-weight: bold; /* Poner el texto en negrita */
+    color: #000; /* Color de texto oscuro */
+  }
+  
+  /* Estilo para las celdas del pie */
+  .footer-row td {
+    text-align: right; /* Centrar el contenido */
+    padding: 10px; /* Espaciado adicional */
+  }
+  
+  /* Estilo opcional: agregar borde superior para el footer */
+  .footer-row td {
+    border-top: 2px solid #000; /* Borde superior */
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .align-center {
+    text-align: center;
+  }

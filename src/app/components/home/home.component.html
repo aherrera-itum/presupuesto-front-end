@@ -1,0 +1,41 @@
+<mat-card class="home-card">
+    <mat-card-header>
+      <mat-card-title>Bienvenido a la Aplicación de Gestión Financiera</mat-card-title>
+      <mat-card-subtitle>Organiza y controla tus presupuestos, ingresos y egresos</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="features-container">
+        <mat-card class="feature-card" (click)="navigateTo('presupuesto')">
+          <mat-icon class="feature-icon" color="primary">attach_money</mat-icon>
+          <mat-card-title>Presupuesto</mat-card-title>
+          <mat-card-content>
+            Gestiona y planea tus presupuestos mensuales de forma sencilla y organizada.
+          </mat-card-content>
+        </mat-card>
+  
+        <mat-card class="feature-card" (click)="navigateTo('ingreso')">
+          <mat-icon class="feature-icon" color="primary">paid</mat-icon>
+          <mat-card-title>Ingresos</mat-card-title>
+          <mat-card-content>
+            Registra y monitorea tus ingresos para tener un control financiero completo.
+          </mat-card-content>
+        </mat-card>
+  
+        <mat-card class="feature-card" (click)="navigateTo('egreso')">
+          <mat-icon class="feature-icon" color="primary">payment</mat-icon>
+          <mat-card-title>Egresos</mat-card-title>
+          <mat-card-content>
+            Lleva un registro detallado de tus gastos para mantener un balance adecuado.
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="feature-card" (click)="navigateTo('consulta')">
+          <mat-icon class="feature-icon" color="primary">summarize</mat-icon>
+          <mat-card-title>Consulta</mat-card-title>
+          <mat-card-content>
+            Consulta tus Ingresos y Egresos.
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-card-content>
+  </mat-card>

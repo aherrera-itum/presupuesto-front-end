@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <h2>Listado de Presupuesto</h2>
+</mat-toolbar>
+
+<table mat-table [dataSource]="presupuestoDataSource">
+    <ng-container matColumnDef="mes">
+      <th mat-header-cell *matHeaderCellDef> Mes </th>
+      <td mat-cell *matCellDef="let presupuesto"> {{getMonthName(presupuesto.mes)}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="monto">
+      <th mat-header-cell *matHeaderCellDef> Monto </th>
+      <td mat-cell *matCellDef="let presupuesto"> {{presupuesto.monto | currency:'USD':'symbol' }} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="comentario">
+      <th mat-header-cell *matHeaderCellDef> Comentario </th>
+      <td mat-cell *matCellDef="let presupuesto"> {{presupuesto.comentario}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let presupuesto">
+        <button mat-icon-button color="primary" (click)="editPresupuesto(presupuesto)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deletePresupuesto(presupuesto._id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>  
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

@@ -1,0 +1,6 @@
+<div class="container">
+    <h1>Registro de Ingresos</h1>
+    <app-ingreso-form (refreshIngresos)="refreshIngresoList()" [ingreso]="selectIngreso" ></app-ingreso-form>
+    <div style="padding: 15px;">&nbsp;</div>
+    <app-ingreso-list [refrescarLista]="refrescarLista" (editIngresoEvent)="onEditIngreso($event)" ></app-ingreso-list>
+</div>

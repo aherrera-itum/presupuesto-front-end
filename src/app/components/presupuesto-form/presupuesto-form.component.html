@@ -1,0 +1,33 @@
+<form [formGroup]="presupuestoForm()" (submit)="saveForm()">
+    <mat-card>
+      <input type="hidden" formControlName="_id">
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Mes</mat-label>
+        <mat-select formControlName="mes">
+          <mat-option value="">-Seleccione-</mat-option>
+          @for (mes of meses; track $index) {
+            <mat-option [value]="$index + 1">{{ mes }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Monto</mat-label>
+        <input matInput type="text" formControlName="monto">
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Comentario</mat-label>
+        <textarea matInput formControlName="comentario"></textarea>
+      </mat-form-field>
+      
+      @if (showError) {
+        <mat-error>Se encontró que los datos enviados no son válidos</mat-error>
+      }
+      
+      <div class="button-group">
+        <button mat-raised-button color="primary" type="submit" [disabled]="validForm()">Guardar</button>
+      </div>
+    </mat-card>
+  </form>

@@ -1,0 +1,6 @@
+<div class="container">
+    <h1>Registro de Presupuesto</h1>
+    <app-presupuesto-form (refreshPresupuestos)="refreshPresupuestoList()" [presupuesto]="selectedPresupuesto"  ></app-presupuesto-form>
+    <div style="padding: 15px;">&nbsp;</div>
+    <app-presupuesto-list [refrescarLista]="refrescarLista" (editPresupuestoEvent)="onEditPresupuesto($event)"></app-presupuesto-list>
+</div>
