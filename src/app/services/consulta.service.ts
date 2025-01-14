@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ConsultaService {
-  private baseUrl = "http://localhost:5000/consulta"
+  private baseUrl = "https://presupuesto-back-end.onrender.com/consulta"
   constructor( private http: HttpClient) { }
 
   //Consulta

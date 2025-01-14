@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EgresoTsService {
-  private baseUrl = "http://localhost:5000/egreso"
+  private baseUrl = "https://presupuesto-back-end.onrender.com/egreso"
   constructor( private http: HttpClient) { }
 
   //Todos los egresos

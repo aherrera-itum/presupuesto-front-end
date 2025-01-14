@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class IngresoTsService {
-  private baseUrl = "http://localhost:5000/ingreso"
+  private baseUrl = "https://presupuesto-back-end.onrender.com/ingreso"
   constructor( private http: HttpClient) { }
 
   //Todos los ingresos

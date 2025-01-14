@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PresupuestoTsService {
-  private baseUrl = "http://localhost:5000/presupuesto"
+  private baseUrl = "https://presupuesto-back-end.onrender.com/presupuesto"
 
   constructor( private http: HttpClient) { }
 
